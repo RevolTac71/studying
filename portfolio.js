@@ -1,43 +1,42 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const tabLinks = document.querySelectorAll('.nav-link');
+    
+    const navLinks = document.querySelectorAll('.nav-link');
     const contentTabs = document.querySelectorAll('.content-tab');
 
-    tabLinks.forEach(link => {
+    navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            const targetTabId = link.getAttribute('data-tab');
-
-            tabLinks.forEach(navLink => {
-                navLink.classList.remove('nav-link-active');
-                navLink.classList.add('nav-link-inactive');
-            });
-
-            link.classList.add('nav-link-active');
-            link.classList.remove('nav-link-inactive');
+            const targetTab = link.getAttribute('data-tab');
 
             contentTabs.forEach(tab => {
-                if (!tab.classList.contains('hidden')) {
-                    tab.classList.add('hidden');
-                }
+                tab.classList.add('hidden');
             });
 
-            const targetTab = document.getElementById(targetTabId);
-            if (targetTab) {
-                targetTab.classList.remove('hidden');
-            }
-        });
-    });
-    const mainImage = document.getElementById('project-main-image');
-    const thumbnails = document.querySelectorAll('.project-thumb');
+            document.getElementById(targetTab).classList.remove('hidden');
 
-    thumbnails.forEach(thumb => {
-        thumb.addEventListener('click', () => {
-            mainImage.src = thumb.src;
-            thumbnails.forEach(t => {
-                t.classList.remove('border-blue-500');
-                t.classList.add('border-transparent');
+            navLinks.forEach(nav => {
+                nav.classList.remove('text-blue-600', 'bg-blue-50'); 
+                nav.classList.add('text-gray-500'); 
             });
-            thumb.classList.remove('border-transparent');
-            thumb.classList.add('border-blue-500');
+
+            link.classList.remove('text-gray-500');
+            link.classList.add('text-blue-600', 'bg-blue-50');
         });
     });
+
+
+    const textToType = "안녕하세요! 👋 빅데이터융합전공 양승규입니다.";
+    const typeSpeed = 100; 
+    const typeTarget = document.getElementById("typewriter");
+    let charIndex = 0;
+
+    function typeWriter() {
+        if (charIndex < textToType.length) {
+            typeTarget.textContent += textToType.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeWriter, typeSpeed);
+        }
+    }
+
+    typeWriter();
+
 });
