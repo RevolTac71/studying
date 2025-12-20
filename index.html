@@ -3,193 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>개인 포트폴리오</title>
+    <h1 class="text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+    개인 포트폴리오
+</h1>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Noto Sans KR', sans-serif; }
-        html { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Noto Sans KR', sans-serif; 
+            background-color: #f8fafc;
+            background-image: linear-gradient(rgba(200, 200, 200, 0.3) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(200, 200, 200, 0.3) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
     </style>
 </head>
-<body class="bg-gray-100">
+<body class="text-gray-800">
 
-    <div class="container mx-auto max-w-7xl p-4 md:p-4">
+    <div class="container mx-auto max-w-6xl p-6">
 
-        <header class="text-center my-8 md:my-4">
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 tracking-tight">
+        <header class="text-center my-12 animate-fade-in-down">
+            <h1 class="text-5xl md:text-6xl font-black tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-blue-500 to-cyan-400 drop-shadow-sm">
                 개인 포트폴리오
             </h1>
-            <p class="text-lg md:text-xl text-gray-600 mt-2">
-                부경대학교 빅데이터융합전공 양승규
+            <p class="text-xl text-gray-500 font-medium">
+                Data Analyst & Quant Developer <span class="text-blue-600 font-bold">Yang Seung-gyu</span>
             </p>
         </header>
 
-        <nav id="topMenu" class="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg mb-8 overflow-hidden sticky top-0 z-50 transition-all duration-300">
-            <ul class="flex flex-wrap justify-center divide-x divide-gray-200">
-                <li>
-                    <button class="nav-link w-full md:w-auto px-16 py-4 font-bold transition-colors duration-300 ease-in-out hover:bg-blue-50 text-blue-600" data-tab="home">
-                        소개
-                    </button>
-                </li>
-                <li>
-                    <button class="nav-link w-full md:w-auto px-16 py-4 font-bold transition-colors duration-300 ease-in-out hover:bg-blue-50 text-gray-500" data-tab="projects">
-                        프로젝트
-                    </button>
-                </li>
-                <li>
-                    <button class="nav-link w-full md:w-auto px-16 py-4 font-bold transition-colors duration-300 ease-in-out hover:bg-blue-50 text-gray-500" data-tab="skills">
-                        보유 기술
-                    </button>
-                </li>
-                <li>
-                    <button class="nav-link w-full md:w-auto px-16 py-4 font-bold transition-colors duration-300 ease-in-out hover:bg-blue-50 text-gray-500" data-tab="contact">
-                        연락처
-                    </button>
-                </li>
+        <nav id="topMenu" class="bg-white/90 backdrop-blur-md rounded-2xl shadow-xl shadow-blue-900/5 mb-12 sticky top-4 z-50 border border-white/50">
+            <ul class="flex justify-center divide-x divide-gray-100">
+                <li><button class="nav-link px-8 py-4 font-bold transition-all hover:text-blue-600 hover:bg-blue-50 rounded-l-2xl text-blue-600" data-tab="home">소개</button></li>
+                <li><button class="nav-link px-8 py-4 font-bold transition-all hover:text-blue-600 hover:bg-blue-50 text-gray-400" data-tab="projects">프로젝트</button></li>
+                <li><button class="nav-link px-8 py-4 font-bold transition-all hover:text-blue-600 hover:bg-blue-50 text-gray-400" data-tab="skills">기술</button></li>
+                <li><button class="nav-link px-8 py-4 font-bold transition-all hover:text-blue-600 hover:bg-blue-50 rounded-r-2xl text-gray-400" data-tab="contact">연락처</button></li>
             </ul>
         </nav>
 
         <main id="content-area">
-            <section id="home" class="content-tab p-6 md:p-10 bg-white rounded-lg shadow-lg space-y-6 animate-fade-in">
-                <h2 id="typewriter" class="text-3xl font-semibold text-gray-900 border-b pb-3 min-h-[40px]">
-                    </h2>
-                <p class="text-lg text-gray-700 leading-relaxed">
-                    저는 부경대학교 빅데이터융합전공 양승규입니다. 증권 및 금융 데이터 분석, 혹은 퀀트 트레이딩에 관심이 많으며,
-                    관련 프로젝트를 통해 실력을 쌓아가고 있습니다. 이 포트폴리오에서는 저의 프로젝트들과 역량들에 대해 소개하고 있습니다.
-                </p>
-                <div class="overflow-hidden rounded-lg shadow-md">
-                    <img src="Images/main.png" 
-                         alt="대표 이미지" 
-                         class="w-full h-auto object-cover transform transition-transform duration-500 hover:scale-105"
-                         onerror="this.src='https://placehold.co/900x400/3b82f6/ffffff?text=Main+Image'">
-                </div>
-            </section>
-
-            <section id="projects" class="content-tab p-6 md:p-10 bg-white rounded-lg shadow-lg space-y-8 hidden">
-                <h2 class="text-3xl font-semibold text-gray-900 border-b pb-3">
-                    🚀 프로젝트
-                </h2>
-
-                <div class="border rounded-lg p-6 md:p-8 shadow-inner bg-gray-50 overflow-hidden hover:shadow-md transition-shadow duration-300">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div>
-                            <h3 class="text-2xl font-semibold text-blue-600 md:hidden mb-4">주식 매수 지표 분석</h3>
-                            
-                            <div class="overflow-hidden rounded-lg shadow-md border-2 border-gray-200">
-                                <img id="project-main-image" 
-                                     src="Images/streamlit_main.png" 
-                                     alt="프로젝트 메인 스크린샷" 
-                                     class="w-full h-auto object-cover transform transition-transform duration-500 hover:scale-105"
-                                     onerror="this.src='https://placehold.co/600x400/cccccc/333333?text=Project+Image'">
-                            </div>
-
-                            <div class="flex flex-wrap gap-2 mt-4">
-                                <img src="Images/streamlit_main.png" class="project-thumb w-16 h-16 rounded-md cursor-pointer border-2 border-blue-500 hover:opacity-80 transition-opacity" onerror="this.src='https://placehold.co/100x100/333/fff?text=1'">
-                                <img src="Images/streamlit_using.png" class="project-thumb w-16 h-16 rounded-md cursor-pointer border-2 border-transparent hover:border-blue-400 transition-all" onerror="this.src='https://placehold.co/100x100/333/fff?text=2'">
-                                <img src="Images/codes.png" class="project-thumb w-16 h-16 rounded-md cursor-pointer border-2 border-transparent hover:border-blue-400 transition-all" onerror="this.src='https://placehold.co/100x100/333/fff?text=3'">
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-2xl font-semibold text-blue-600 hidden md:block">주식 매수 지표 분석</h3>
-                            
-                            <p class="text-gray-700 mt-4 mb-4 leading-relaxed">
-                                저의 첫번째 개인 프로젝트입니다. 주식 투자에 관심이 많았고, 전공인 데이터 분석을 살려 어떤 주식이 저의 매수 지표에 부합하는지
-                                찾을 수 있게 파이썬으로 코드화 했습니다.
-                            </p>
-                            
-                            <h4 class="font-semibold text-gray-800 mt-6 mb-2">주요 사용 기술</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full hover:bg-blue-200 transition-colors cursor-default">Python</span>
-                                <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full hover:bg-green-200 transition-colors cursor-default">Pandas</span>
-                                <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full hover:bg-purple-200 transition-colors cursor-default">Streamlit</span>
-                                <span class="bg-gray-100 text-gray-800 text-sm font-medium px-3 py-1 rounded-full hover:bg-gray-200 transition-colors cursor-default">yfinance</span>
-                                <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full hover:bg-yellow-200 transition-colors cursor-default">Numpy</span>
-                            </div>
-
-                            <div class="mt-8 space-y-2">
-                                <div>
-                                    <a href="https://revoltac-stockanalysis.streamlit.app/" target="_blank" class="text-blue-500 hover:text-blue-700 font-semibold inline-flex items-center transition-colors">
-                                        🔗 프로젝트1 바로가기
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="https://revoltac-montecarlo.streamlit.app/" target="_blank" class="text-blue-500 hover:text-blue-700 font-semibold inline-flex items-center transition-colors">
-                                        🔗 프로젝트2 바로가기
-                                    </a>
-                                </div>
-                                <p class="text-sm text-gray-500 mt-2">
-                                    (Streamlit 특성 상 휴면 상태일 수 있습니다. 접속이 안 되면 연락 주세요.)
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="skills" class="content-tab p-6 md:p-10 bg-white rounded-lg shadow-lg hidden">
-                <h2 class="text-3xl font-semibold text-gray-900 border-b pb-3">
-                    🛠️ 보유 기술
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                        <h4 class="text-2xl font-semibold text-gray-800 mb-4">Programming</h4>
-                        <ul class="space-y-2 text-gray-700 text-lg">
-                            <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>Python</li>
-                            <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>SQL</li>
-                            <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>HTML</li>
-                        </ul>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                        <h4 class="text-2xl font-semibold text-gray-800 mb-4">Licenses</h4>
-                        <ul class="space-y-2 text-gray-700 text-lg">
-                            <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>워드프로세서 단일등급</li>
-                            <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>ITQ 엑셀</li>
-                            <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>TOEIC 880</li>
-                            <li class="flex items-center text-red-500 font-medium"><span class="w-2 h-2 bg-red-500 rounded-full mr-2"></span>투자자산운용사(예정)</li>
-                        </ul>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                        <h4 class="text-2xl font-semibold text-gray-800 mb-4">Experiences</h4>
-                        <ul class="space-y-2 text-gray-700 text-lg">
-                            <li class="flex items-start"><span class="mt-2 w-2 h-2 bg-purple-500 rounded-full mr-2 shrink-0"></span>부경대학교 빅데이터융합전공</li>
-                            <li class="flex items-start"><span class="mt-2 w-2 h-2 bg-purple-500 rounded-full mr-2 shrink-0"></span>교내 동아리 투자 대회 1위</li>
-                            <li class="flex items-start"><span class="mt-2 w-2 h-2 bg-purple-500 rounded-full mr-2 shrink-0"></span>군 시절 엑셀 관련 표창 수상</li>
-                            <li class="flex items-start"><span class="mt-2 w-2 h-2 bg-purple-500 rounded-full mr-2 shrink-0"></span>증권 투자 5년차</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section id="contact" class="content-tab p-6 md:p-10 bg-white rounded-lg shadow-lg hidden">
-                <h2 class="text-3xl font-semibold text-gray-900 border-b pb-3">
-                    📫 연락처
-                </h2>
-                <div class="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100">
-                    <p class="text-lg text-gray-700 mb-6">
-                        저에게 연락을 원하시거나, 더 궁금한 점이 있다면 아래 정보로 연락해주세요.
+            
+            <section id="home" class="content-tab space-y-8">
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100">
+                    <h2 id="typewriter" class="text-3xl font-bold text-gray-800 mb-6 h-10 flex items-center"></h2>
+                    <p class="text-lg text-gray-600 leading-8 mb-8">
+                        데이터의 흐름을 읽고 투자의 가치를 발견합니다.<br>
+                        저는 <strong class="text-blue-600">빅데이터</strong>와 <strong class="text-blue-600">금융</strong>을 연결하는 개발자가 되고 싶은 양승규입니다.
                     </p>
-                    <ul class="space-y-4 text-lg">
-                        <li class="flex items-center">
-                            <span class="font-bold w-24 text-gray-800">Email:</span> 
-                            <a href="mailto:ksmsk0701@gmail.com" class="text-blue-600 hover:underline hover:text-blue-800 transition-colors">ksmsk0701@gmail.com</a>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="font-bold w-24 text-gray-800">Phone:</span> 
-                            <a href="tel:010-2372-3096" class="text-blue-600 hover:underline hover:text-blue-800 transition-colors">010-2372-3096</a>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="font-bold w-24 text-gray-800">GitHub:</span> 
-                            <a href="https://github.com/Sparrow-0701/studying" target="_blank" class="text-blue-600 hover:underline hover:text-blue-800 transition-colors">github.com/Sparrow-0701/studying</a>
-                        </li>
-                    </ul>
+                    <div class="rounded-2xl overflow-hidden shadow-2xl shadow-blue-200 transform hover:scale-[1.02] transition-transform duration-500">
+                        <img src="Images/main.png" alt="대표 이미지" class="w-full object-cover" onerror="this.src='https://placehold.co/1200x500/3b82f6/ffffff?text=Main+Image+Design'">
+                    </div>
                 </div>
+            </section>
+
+            <section id="projects" class="content-tab hidden space-y-8">
+                <div class="bg-white rounded-3xl p-8 shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                        <div>
+                             <img src="Images/streamlit_main.png" class="rounded-2xl shadow-lg border border-gray-100 hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400?text=Project'">
+                        </div>
+                        <div>
+                            <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-bold mb-2">Python Project</span>
+                            <h3 class="text-3xl font-bold text-gray-800 mb-4">주식 매수 지표 분석기</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                "내 투자 지표에 맞는 종목은 무엇일까?"<br>
+                                복잡한 주식 데이터를 분석하여 매수 시그널을 포착하는 대시보드입니다.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span class="px-3 py-1 bg-gray-100 rounded-lg text-sm font-semibold text-gray-600">#Python</span>
+                                <span class="px-3 py-1 bg-gray-100 rounded-lg text-sm font-semibold text-gray-600">#Streamlit</span>
+                                <span class="px-3 py-1 bg-gray-100 rounded-lg text-sm font-semibold text-gray-600">#Finance</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30">
+                                보러 가기 🚀
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="content-tab hidden">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-8 rounded-3xl shadow-lg shadow-gray-200/50 hover:-translate-y-2 transition-transform duration-300 border-t-4 border-blue-500">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4">Programming</h4>
+                        <ul class="space-y-3 text-gray-600">
+                            <li>🐍 Python (Data Analysis)</li>
+                            <li>💾 SQL (Querying)</li>
+                            <li>🌐 HTML/CSS</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-lg shadow-gray-200/50 hover:-translate-y-2 transition-transform duration-300 border-t-4 border-cyan-500">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4">Licenses</h4>
+                        <ul class="space-y-3 text-gray-600">
+                            <li>📊 투자자산운용사 (예정)</li>
+                            <li>📑 워드프로세서</li>
+                            <li>📈 ITQ 엑셀</li>
+                            <li>🗣️ TOEIC 880</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-lg shadow-gray-200/50 hover:-translate-y-2 transition-transform duration-300 border-t-4 border-indigo-500">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4">Career</h4>
+                        <ul class="space-y-3 text-gray-600">
+                            <li>🎓 부경대 빅데이터융합전공</li>
+                            <li>🏆 교내 투자대회 1위</li>
+                            <li>💸 증권 투자 5년차</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="contact" class="content-tab hidden">
+                 <div class="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-3xl p-10 text-white shadow-2xl text-center">
+                    <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+                    <p class="mb-8 opacity-90">언제든 연락 주세요. 함께 성장할 기회를 기다립니다.</p>
+                    <div class="inline-block bg-white/20 backdrop-blur-md px-8 py-4 rounded-xl">
+                        <p class="text-xl font-bold">ksmsk0701@gmail.com</p>
+                    </div>
+                 </div>
             </section>
 
         </main>
     </div>
-
     <script src="portfolio.js"></script>
-
 </body>
 </html>
