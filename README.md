@@ -11,4 +11,4 @@ Python과 금융 데이터 분석을 공부하며 작성한 실습 코드와 개
 - `packaged/`: 별도 Python 앱 및 의존성 파일
 - `Images/`: 웹 페이지와 실습에 사용하는 이미지
 
-각 실습의 의존성은 해당 폴더의 `requirements.txt`를 확인하세요. 오래된 실습 코드는 현재 라이브러리나 외부 데이터 서비스와 호환되지 않을 수 있으며, 이 문서 작성 과정에서 실행 여부는 검증하지 않았습니다.
+`projects/MonteCarlo/`, `projects/StockAnalysis/`, `packaged/`에는 각각 의존성 목록이 있습니다.
